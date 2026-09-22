@@ -1,49 +1,49 @@
 {
-	"name": "@exogee/graphweaver-config",
-	"version": "2.24.0",
-	"description": "Retrieve and parse Graphweaver configurations",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write .",
-		"version": "npm version --no-git-tag-version",
-		"test": "vitest run"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"esbuild": "0.28.1",
-		"lodash": "4.18.1"
-	},
-	"devDependencies": {
-		"@types/lodash": "4.17.23",
-		"@types/node": "26.6.1",
-		"prettier": "3.9.6",
-		"vite": "7.3.2",
-		"vitest": "4.1.0"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver-config",
+  "version": "2.24.1",
+  "description": "Retrieve and parse Graphweaver configurations",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write .",
+    "version": "npm version --no-git-tag-version",
+    "test": "vitest run"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "esbuild": "0.28.1",
+    "lodash": "4.18.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.17.23",
+    "@types/node": "26.6.1",
+    "prettier": "3.9.6",
+    "vite": "7.3.2",
+    "vitest": "4.1.0"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

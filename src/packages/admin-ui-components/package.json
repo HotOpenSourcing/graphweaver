@@ -1,114 +1,114 @@
 {
-	"name": "@exogee/graphweaver-admin-ui-components",
-	"version": "2.24.0",
-	"description": "Components from Graphweaver's admin UI which you can use in your projects as you like",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"type": "module",
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"build:watch": "pnpm build:js --watch",
-		"prettier": "prettier --write .",
-		"codegen": "graphql-codegen --config ./codegen.yml",
-		"test:tsc": "tsc --noEmit",
-		"test:prettier": "prettier --check .",
-		"version": "npm version --no-git-tag-version",
-		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
-	},
-	"main": "lib/index.js",
-	"types": "lib/index.d.ts",
-	"exports": {
-		".": {
-			"types": "./lib/index.d.ts",
-			"default": "./lib/index.js"
-		},
-		"./documents": {
-			"types": "./lib/documents/index.d.ts",
-			"default": "./lib/documents/index.js"
-		},
-		"./lib/*": "./lib/*"
-	},
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@apollo/client": "3.13.5",
-		"@exogee/graphweaver-apollo-client": "workspace:*",
-		"@graphiql/toolkit": "0.11.3",
-		"@tanstack/react-form": "1.33.5",
-		"@tanstack/react-table": "8.21.3",
-		"@tiptap/extension-link": "3.22.0",
-		"@tiptap/react": "3.22.0",
-		"@tiptap/starter-kit": "3.22.0",
-		"@types/react-dom": "19.3.0",
-		"clsx": "2.1.1",
-		"downshift": "9.0.13",
-		"graphiql": "4.1.2",
-		"graphql-deduplicator": "2.0.6",
-		"graphql-tag": "2.12.6",
-		"jwt-decode": "4.0.0",
-		"luxon": "3.7.2",
-		"motion": "12.27.1",
-		"papaparse": "5.5.3",
-		"react-day-picker": "9.11.1",
-		"react-error-boundary": "6.1.5",
-		"react-fast-compare": "3.2.2",
-		"react-hot-toast": "2.6.0",
-		"react-resizable-panels": "3.0.6",
-		"react-syntax-highlighter": "16.1.0",
-		"tiptap-markdown": "0.9.0",
-		"wouter": "3.11.0",
-		"zod": "4.3.5"
-	},
-	"peerDependencies": {
-		"formik": "^2.4.6",
-		"graphql": "16",
-		"react": "^18.0.0 || ^19.0.0",
-		"react-dom": "^18.0.0 || ^19.0.0"
-	},
-	"devDependencies": {
-		"@storybook/addon-docs": "10.3.4",
-		"@storybook/addon-onboarding": "10.3.4",
-		"@storybook/react-vite": "10.3.4",
-		"@types/graphql-deduplicator": "2.0.2",
-		"@types/luxon": "3.7.1",
-		"@types/papaparse": "5.5.2",
-		"@types/react": "19.3.0",
-		"@types/react-syntax-highlighter": "15.5.13",
-		"esbuild": "0.28.1",
-		"esbuild-plugin-copy": "2.1.1",
-		"eslint-plugin-storybook": "10.1.11",
-		"formik": "2.4.9",
-		"glob": "13.0.6",
-		"graphql": "16.12.0",
-		"react": "19.3.0",
-		"react-dom": "19.3.0",
-		"storybook": "10.5.8",
-		"typescript": "7.0.2",
-		"vite": "7.3.2",
-		"vite-plugin-graphweaver": "workspace:*",
-		"vitest": "4.1.0"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver-admin-ui-components",
+  "version": "2.24.1",
+  "description": "Components from Graphweaver's admin UI which you can use in your projects as you like",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "build:watch": "node init && pnpm build:js --watch",
+    "prettier": "prettier --write .",
+    "codegen": "graphql-codegen --config ./codegen.yml",
+    "test:tsc": "tsc --noEmit",
+    "test:prettier": "prettier --check .",
+    "version": "npm version --no-git-tag-version",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "node init && storybook build"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./documents": {
+      "types": "./lib/documents/index.d.ts",
+      "default": "./lib/documents/index.js"
+    },
+    "./lib/*": "./lib/*"
+  },
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@apollo/client": "3.13.5",
+    "@exogee/graphweaver-apollo-client": "workspace:*",
+    "@graphiql/toolkit": "0.11.3",
+    "@tanstack/react-form": "1.33.5",
+    "@tanstack/react-table": "8.21.3",
+    "@tiptap/extension-link": "3.22.0",
+    "@tiptap/react": "3.22.0",
+    "@tiptap/starter-kit": "3.22.0",
+    "@types/react-dom": "19.3.0",
+    "clsx": "2.1.1",
+    "downshift": "9.0.13",
+    "graphiql": "4.1.2",
+    "graphql-deduplicator": "2.0.6",
+    "graphql-tag": "2.12.6",
+    "jwt-decode": "4.0.0",
+    "luxon": "3.7.2",
+    "motion": "12.27.1",
+    "papaparse": "5.5.3",
+    "react-day-picker": "9.11.1",
+    "react-error-boundary": "6.1.5",
+    "react-fast-compare": "3.2.2",
+    "react-hot-toast": "2.6.0",
+    "react-resizable-panels": "3.0.6",
+    "react-syntax-highlighter": "16.1.0",
+    "tiptap-markdown": "0.9.0",
+    "wouter": "3.11.0",
+    "zod": "4.3.5"
+  },
+  "peerDependencies": {
+    "formik": "^2.4.6",
+    "graphql": "16",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "10.3.4",
+    "@storybook/addon-onboarding": "10.3.4",
+    "@storybook/react-vite": "10.3.4",
+    "@types/graphql-deduplicator": "2.0.2",
+    "@types/luxon": "3.7.1",
+    "@types/papaparse": "5.5.2",
+    "@types/react": "19.3.0",
+    "@types/react-syntax-highlighter": "15.5.13",
+    "esbuild": "0.28.1",
+    "esbuild-plugin-copy": "2.1.1",
+    "eslint-plugin-storybook": "10.1.11",
+    "formik": "2.4.9",
+    "glob": "13.0.6",
+    "graphql": "16.12.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "storybook": "10.5.8",
+    "typescript": "7.0.2",
+    "vite": "7.3.2",
+    "vite-plugin-graphweaver": "workspace:*",
+    "vitest": "4.1.0"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

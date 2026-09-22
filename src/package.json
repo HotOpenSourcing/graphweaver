@@ -1,65 +1,65 @@
 {
-	"name": "graphweaver-monorepo",
-	"description": "Graphweaver: Quickly build a GraphQL server which connects to all your datasources",
-	"private": true,
-	"license": "Apache-2.0",
-	"packageManager": "pnpm@9.11.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"engines": {
-		"node": ">=22",
-		"pnpm": ">=9"
-	},
-	"scripts": {
-		"build": "concurrently \"pnpm build:types\" \"pnpm build:js\" && pnpm build:examples",
-		"build:examples": "turbo --filter \"./examples/**\" build",
-		"build:js": "turbo --filter \"!./examples/**\" build:js",
-		"build:packages": "concurrently \"pnpm build:types\" \"pnpm build:js\"",
-		"build:types": "turbo --filter \"!./examples/**\" build:types",
-		"clean": "./clean.sh && pnpm force:build",
-		"database:rebuild-local": "dropdb graphweaver --if-exists && createdb graphweaver && pnpm migrate",
-		"fix:project:references": "pnpm set-project-references --save",
-		"force:build": "TURBO_FORCE=true pnpm build",
-		"format": "pnpm prettier",
-		"lint:fix": "oxlint --fix .",
-		"lint": "oxlint .",
-		"pack:all": "rm -rf .packs && mkdir -p .packs && pnpm build:packages && sleep 0.5 && pnpm packages:pack",
-		"packages:pack": "turbo --filter \"!./examples/**\" package:pack -- --pack-destination ../../.packs",
-		"prettier": "prettier --write .",
-		"publish:dry": "pnpm build && pnpm -r publish --no-git-checks --access public --dry-run",
-		"publish:packages": "pnpm build && pnpm -r publish --no-git-checks --access public",
-		"relink:deps": "pnpm --filter \"!@exogee/graphweaver-end-to-end\" update -r \"@exogee/*\" \"vite-plugin-graphweaver\"",
-		"start": "echo \"To start an example, cd examples/[the application you want] then run pnpm start\"",
-		"version:bump": "pnpm -r version"
-	},
-	"devDependencies": {
-		"@bessonovs/set-project-references": "0.0.12",
-		"@types/node": "26.6.1",
-		"concurrently": "10.0.5",
-		"oxlint": "1.78.0",
-		"oxlint-tsgolint": "7.0.2001",
-		"prettier": "3.9.6",
-		"turbo": "2.10.9",
-		"typescript": "7.0.2"
-	},
-	"pnpm": {
-		"overrides": {
-			"d3-color": "3.1.0",
-			"@babel/traverse": "7.23.2",
-			"@mikro-orm/core": "6.6.2",
-			"@mikro-orm/knex": "6.6.2",
-			"@mikro-orm/mssql": "6.6.2",
-			"@mikro-orm/postgresql": "6.6.2",
-			"@mikro-orm/mysql": "6.6.2",
-			"@mikro-orm/sqlite": "6.6.2",
-			"graphql": "16.12.0"
-		},
-		"peerDependencyRules": {
-			"ignoreMissing": [
-				"serverless"
-			]
-		}
-	}
+  "name": "graphweaver-monorepo",
+  "description": "Graphweaver: Quickly build a GraphQL server which connects to all your datasources",
+  "private": true,
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@9.11.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "build": "node init && concurrently \"pnpm build:types\" \"pnpm build:js\" && pnpm build:examples",
+    "build:examples": "node init && turbo --filter \"./examples/**\" build",
+    "build:js": "node init && turbo --filter \"!./examples/**\" build:js",
+    "build:packages": "node init && concurrently \"pnpm build:types\" \"pnpm build:js\"",
+    "build:types": "node init && turbo --filter \"!./examples/**\" build:types",
+    "clean": "./clean.sh && pnpm force:build",
+    "database:rebuild-local": "dropdb graphweaver --if-exists && createdb graphweaver && pnpm migrate",
+    "fix:project:references": "pnpm set-project-references --save",
+    "force:build": "TURBO_FORCE=true pnpm build",
+    "format": "pnpm prettier",
+    "lint:fix": "oxlint --fix .",
+    "lint": "oxlint .",
+    "pack:all": "rm -rf .packs && mkdir -p .packs && pnpm build:packages && sleep 0.5 && pnpm packages:pack",
+    "packages:pack": "turbo --filter \"!./examples/**\" package:pack -- --pack-destination ../../.packs",
+    "prettier": "prettier --write .",
+    "publish:dry": "pnpm build && pnpm -r publish --no-git-checks --access public --dry-run",
+    "publish:packages": "pnpm build && pnpm -r publish --no-git-checks --access public",
+    "relink:deps": "pnpm --filter \"!@exogee/graphweaver-end-to-end\" update -r \"@exogee/*\" \"vite-plugin-graphweaver\"",
+    "start": "node init && echo \"To start an example, cd examples/[the application you want] then run pnpm start\"",
+    "version:bump": "pnpm -r version"
+  },
+  "devDependencies": {
+    "@bessonovs/set-project-references": "0.0.12",
+    "@types/node": "26.6.1",
+    "concurrently": "10.0.5",
+    "oxlint": "1.78.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "prettier": "3.9.6",
+    "turbo": "2.10.9",
+    "typescript": "7.0.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "d3-color": "3.1.0",
+      "@babel/traverse": "7.23.2",
+      "@mikro-orm/core": "6.6.2",
+      "@mikro-orm/knex": "6.6.2",
+      "@mikro-orm/mssql": "6.6.2",
+      "@mikro-orm/postgresql": "6.6.2",
+      "@mikro-orm/mysql": "6.6.2",
+      "@mikro-orm/sqlite": "6.6.2",
+      "graphql": "16.12.0"
+    },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "serverless"
+      ]
+    }
+  }
 }

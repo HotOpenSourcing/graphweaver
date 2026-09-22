@@ -1,66 +1,66 @@
 {
-	"name": "@exogee/graphweaver",
-	"version": "2.24.0",
-	"description": "Graphweaver Core Package",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write src/**/*.ts",
-		"test": "vitest",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@apollo/server": "5.5.0",
-		"@exogee/graphweaver-scalars": "workspace:*",
-		"@exogee/logger": "workspace:*",
-		"@graphql-tools/utils": "11.0.0",
-		"@opentelemetry/api": "1.9.0",
-		"@opentelemetry/core": "2.5.1",
-		"@opentelemetry/exporter-trace-otlp-http": "0.212.0",
-		"@opentelemetry/resources": "2.5.1",
-		"@opentelemetry/sdk-node": "0.212.0",
-		"@opentelemetry/sdk-trace-base": "2.5.1",
-		"async-mutex": "0.5.0",
-		"class-validator": "0.14.3",
-		"dataloader": "2.2.3",
-		"graphql": "16.12.0",
-		"graphql-parse-resolve-info": "4.14.1",
-		"graphql-query-complexity": "1.1.0",
-		"pluralize": "8.0.0"
-	},
-	"devDependencies": {
-		"@opentelemetry/instrumentation": "0.212.0",
-		"@types/node": "26.6.1",
-		"@types/pluralize": "0.0.33",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"typescript": "7.0.2",
-		"vitest": "4.1.0"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver",
+  "version": "2.24.1",
+  "description": "Graphweaver Core Package",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write src/**/*.ts",
+    "test": "vitest",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@apollo/server": "5.5.0",
+    "@exogee/graphweaver-scalars": "workspace:*",
+    "@exogee/logger": "workspace:*",
+    "@graphql-tools/utils": "11.0.0",
+    "@opentelemetry/api": "1.9.0",
+    "@opentelemetry/core": "2.5.1",
+    "@opentelemetry/exporter-trace-otlp-http": "0.212.0",
+    "@opentelemetry/resources": "2.5.1",
+    "@opentelemetry/sdk-node": "0.212.0",
+    "@opentelemetry/sdk-trace-base": "2.5.1",
+    "async-mutex": "0.5.0",
+    "class-validator": "0.14.3",
+    "dataloader": "2.2.3",
+    "graphql": "16.12.0",
+    "graphql-parse-resolve-info": "4.14.1",
+    "graphql-query-complexity": "1.1.0",
+    "pluralize": "8.0.0"
+  },
+  "devDependencies": {
+    "@opentelemetry/instrumentation": "0.212.0",
+    "@types/node": "26.6.1",
+    "@types/pluralize": "0.0.33",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "typescript": "7.0.2",
+    "vitest": "4.1.0"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

@@ -1,45 +1,45 @@
 {
-	"name": "@exogee/logger",
-	"version": "2.24.0",
-	"description": "Common logging output for Exogee projects",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"version": "npm version --no-git-tag-version"
-	},
-	"dependencies": {
-		"pino": "10.3.1"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/logger",
+  "version": "2.24.1",
+  "description": "Common logging output for Exogee projects",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "version": "npm version --no-git-tag-version"
+  },
+  "dependencies": {
+    "pino": "10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

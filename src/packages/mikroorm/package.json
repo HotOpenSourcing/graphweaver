@@ -1,95 +1,95 @@
 {
-	"name": "@exogee/graphweaver-mikroorm",
-	"version": "2.24.0",
-	"description": "MikroORM backend for @exogee/graphweaver",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"generate:schema": "tsx ./src/utils/generate-db-schema.ts",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write src/**/*.ts",
-		"test": "tsx scripts/check-mikro-overrides-match-installed-versions.ts && pnpm run:unit:tests",
-		"test-introspection": "tsx scripts/test-introspection.ts",
-		"run:unit:tests": "vitest",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@apollo/server": "5.5.0",
-		"@aws-sdk/client-secrets-manager": "3.1029.0",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-server": "workspace:*",
-		"@exogee/logger": "workspace:*",
-		"dataloader": "2.2.3",
-		"decimal.js": "10.6.0",
-		"dotenv": "17.2.3",
-		"pluralize": "8.0.0",
-		"reflect-metadata": "0.2.2"
-	},
-	"peerDependencies": {
-		"@mikro-orm/core": "6",
-		"@mikro-orm/knex": "6",
-		"@mikro-orm/mssql": "6",
-		"@mikro-orm/mysql": "6",
-		"@mikro-orm/postgresql": "6",
-		"@mikro-orm/sqlite": "6",
-		"graphql": "16"
-	},
-	"peerDependenciesMeta": {
-		"@mikro-orm/mssql": {
-			"optional": true
-		},
-		"@mikro-orm/mysql": {
-			"optional": true
-		},
-		"@mikro-orm/knex": {
-			"optional": true
-		},
-		"@mikro-orm/postgresql": {
-			"optional": true
-		},
-		"@mikro-orm/sqlite": {
-			"optional": true
-		}
-	},
-	"devDependencies": {
-		"@mikro-orm/core": "6.6.2",
-		"@mikro-orm/knex": "6.6.2",
-		"@mikro-orm/mssql": "6.6.2",
-		"@mikro-orm/mysql": "6.6.2",
-		"@mikro-orm/postgresql": "6.6.2",
-		"@mikro-orm/sqlite": "6.6.2",
-		"@types/node": "26.6.1",
-		"@types/pluralize": "0.0.33",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"graphql": "16.12.0",
-		"tsx": "4.20.6",
-		"typescript": "7.0.2",
-		"vitest": "4.1.0"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver-mikroorm",
+  "version": "2.24.1",
+  "description": "MikroORM backend for @exogee/graphweaver",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "generate:schema": "tsx ./src/utils/generate-db-schema.ts",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write src/**/*.ts",
+    "test": "tsx scripts/check-mikro-overrides-match-installed-versions.ts && pnpm run:unit:tests",
+    "test-introspection": "tsx scripts/test-introspection.ts",
+    "run:unit:tests": "node init && vitest",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@apollo/server": "5.5.0",
+    "@aws-sdk/client-secrets-manager": "3.1029.0",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-server": "workspace:*",
+    "@exogee/logger": "workspace:*",
+    "dataloader": "2.2.3",
+    "decimal.js": "10.6.0",
+    "dotenv": "17.2.3",
+    "pluralize": "8.0.0",
+    "reflect-metadata": "0.2.2"
+  },
+  "peerDependencies": {
+    "@mikro-orm/core": "6",
+    "@mikro-orm/knex": "6",
+    "@mikro-orm/mssql": "6",
+    "@mikro-orm/mysql": "6",
+    "@mikro-orm/postgresql": "6",
+    "@mikro-orm/sqlite": "6",
+    "graphql": "16"
+  },
+  "peerDependenciesMeta": {
+    "@mikro-orm/mssql": {
+      "optional": true
+    },
+    "@mikro-orm/mysql": {
+      "optional": true
+    },
+    "@mikro-orm/knex": {
+      "optional": true
+    },
+    "@mikro-orm/postgresql": {
+      "optional": true
+    },
+    "@mikro-orm/sqlite": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@mikro-orm/core": "6.6.2",
+    "@mikro-orm/knex": "6.6.2",
+    "@mikro-orm/mssql": "6.6.2",
+    "@mikro-orm/mysql": "6.6.2",
+    "@mikro-orm/postgresql": "6.6.2",
+    "@mikro-orm/sqlite": "6.6.2",
+    "@types/node": "26.6.1",
+    "@types/pluralize": "0.0.33",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "graphql": "16.12.0",
+    "tsx": "4.20.6",
+    "typescript": "7.0.2",
+    "vitest": "4.1.0"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

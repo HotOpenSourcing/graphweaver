@@ -1,58 +1,58 @@
 {
-	"name": "@exogee/graphweaver-rest-legacy",
-	"version": "2.24.0",
-	"description": "Legacy RESTful backend adapter for @exogee/graphweaver",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write src/**/*.ts",
-		"codegen": "graphql-codegen --config ./codegen.yml",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/logger": "workspace:*",
-		"apollo-server-errors": "3.3.1",
-		"class-validator": "0.14.3",
-		"dataloader": "2.2.3",
-		"dotenv": "17.2.3",
-		"graphql": "16.12.0",
-		"lodash": "4.18.1",
-		"luxon": "3.7.2"
-	},
-	"devDependencies": {
-		"@types/lodash": "4.17.23",
-		"@types/luxon": "3.7.1",
-		"@types/node": "26.6.1",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"prettier": "3.9.6",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver-rest-legacy",
+  "version": "2.24.1",
+  "description": "Legacy RESTful backend adapter for @exogee/graphweaver",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write src/**/*.ts",
+    "codegen": "graphql-codegen --config ./codegen.yml",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/logger": "workspace:*",
+    "apollo-server-errors": "3.3.1",
+    "class-validator": "0.14.3",
+    "dataloader": "2.2.3",
+    "dotenv": "17.2.3",
+    "graphql": "16.12.0",
+    "lodash": "4.18.1",
+    "luxon": "3.7.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.17.23",
+    "@types/luxon": "3.7.1",
+    "@types/node": "26.6.1",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "prettier": "3.9.6",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

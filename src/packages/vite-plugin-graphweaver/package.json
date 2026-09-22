@@ -1,49 +1,49 @@
 {
-	"name": "vite-plugin-graphweaver",
-	"version": "2.24.0",
-	"description": "A vite plugin for use with @exogee/graphweaver's admin UI",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"sideEffects": false,
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"version": "npm version --no-git-tag-version"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"typescript": "7.0.2",
-		"vite": "7.3.2"
-	},
-	"peerDependencies": {
-		"vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
-	},
-	"dependencies": {
-		"@exogee/graphweaver-config": "workspace:*"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "vite-plugin-graphweaver",
+  "version": "2.24.1",
+  "description": "A vite plugin for use with @exogee/graphweaver's admin UI",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "version": "npm version --no-git-tag-version"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "typescript": "7.0.2",
+    "vite": "7.3.2"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "dependencies": {
+    "@exogee/graphweaver-config": "workspace:*"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

@@ -1,64 +1,64 @@
 {
-	"name": "@exogee/graphweaver-example-xero",
-	"version": "2.24.0",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"private": true,
-	"description": "Example of using @exogee/graphweaver to connect two Xero instances",
-	"scripts": {
-		"build": "graphweaver build",
-		"gw": "graphweaver",
-		"prettier": "prettier --write src/**/*.ts",
-		"start": "graphweaver start",
-		"watch": "graphweaver watch",
-		"start:backend": "graphweaver start backend",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@apollo/client": "3.13.5",
-		"@apollo/server": "5.5.0",
-		"@as-integrations/aws-lambda": "4.0.1",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-admin-ui": "workspace:*",
-		"@exogee/graphweaver-admin-ui-components": "workspace:*",
-		"@exogee/graphweaver-scalars": "workspace:*",
-		"@exogee/graphweaver-server": "workspace:*",
-		"@exogee/graphweaver-xero": "workspace:*",
-		"@exogee/logger": "workspace:*",
-		"@nivo/bump": "0.99.0",
-		"@nivo/core": "0.99.0",
-		"@nivo/line": "0.99.0",
-		"@nivo/theming": "0.99.0",
-		"@nivo/tooltip": "0.99.0",
-		"async-mutex": "0.5.0",
-		"class-validator": "0.14.3",
-		"decimal.js": "10.6.0",
-		"graphql": "16.12.0",
-		"graphweaver": "workspace:*",
-		"prop-types": "15.8.1",
-		"react": "19.3.0",
-		"react-dom": "19.3.0",
-		"wouter": "3.11.0",
-		"xero-node": "13.3.1"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"esbuild": "0.28.1",
-		"prettier": "3.9.6",
-		"typescript": "7.0.2",
-		"vite": "7.3.2",
-		"@types/react": "19.3.0",
-		"@types/react-dom": "19.3.0"
-	}
+  "name": "@exogee/graphweaver-example-xero",
+  "version": "2.24.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "private": true,
+  "description": "Example of using @exogee/graphweaver to connect two Xero instances",
+  "scripts": {
+    "build": "node init && graphweaver build",
+    "gw": "graphweaver",
+    "prettier": "prettier --write src/**/*.ts",
+    "start": "node init && graphweaver start",
+    "watch": "graphweaver watch",
+    "start:backend": "node init && graphweaver start backend",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@apollo/client": "3.13.5",
+    "@apollo/server": "5.5.0",
+    "@as-integrations/aws-lambda": "4.0.1",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-admin-ui": "workspace:*",
+    "@exogee/graphweaver-admin-ui-components": "workspace:*",
+    "@exogee/graphweaver-scalars": "workspace:*",
+    "@exogee/graphweaver-server": "workspace:*",
+    "@exogee/graphweaver-xero": "workspace:*",
+    "@exogee/logger": "workspace:*",
+    "@nivo/bump": "0.99.0",
+    "@nivo/core": "0.99.0",
+    "@nivo/line": "0.99.0",
+    "@nivo/theming": "0.99.0",
+    "@nivo/tooltip": "0.99.0",
+    "async-mutex": "0.5.0",
+    "class-validator": "0.14.3",
+    "decimal.js": "10.6.0",
+    "graphql": "16.12.0",
+    "graphweaver": "workspace:*",
+    "prop-types": "15.8.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "wouter": "3.11.0",
+    "xero-node": "13.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "esbuild": "0.28.1",
+    "prettier": "3.9.6",
+    "typescript": "7.0.2",
+    "vite": "7.3.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  }
 }

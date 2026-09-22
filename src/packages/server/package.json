@@ -1,63 +1,63 @@
 {
-	"name": "@exogee/graphweaver-server",
-	"version": "2.24.0",
-	"description": "Server support for @exogee/graphweaver",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"build:watch": "pnpm build:js --watch",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write src/**/*.ts",
-		"version": "npm version --no-git-tag-version",
-		"test": "vitest"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@apollo/server": "5.5.0",
-		"@as-integrations/aws-lambda": "4.0.1",
-		"@as-integrations/azure-functions": "0.3.0",
-		"@as-integrations/fastify": "3.1.0",
-		"@azure/functions": "4.11.0",
-		"@escape.tech/graphql-armor": "3.2.0",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/logger": "workspace:*",
-		"@fastify/cors": "11.1.0",
-		"class-validator": "0.14.3",
-		"decimal.js": "10.6.0",
-		"fastify": "5.8.3",
-		"graphql": "16.12.0",
-		"graphql-deduplicator": "2.0.6"
-	},
-	"devDependencies": {
-		"@escape.tech/graphql-armor-types": "0.7.0",
-		"@types/graphql-deduplicator": "2.0.2",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"typescript": "7.0.2",
-		"vitest": "4.1.0"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver-server",
+  "version": "2.24.1",
+  "description": "Server support for @exogee/graphweaver",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "build:watch": "node init && pnpm build:js --watch",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write src/**/*.ts",
+    "version": "npm version --no-git-tag-version",
+    "test": "vitest"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@apollo/server": "5.5.0",
+    "@as-integrations/aws-lambda": "4.0.1",
+    "@as-integrations/azure-functions": "0.3.0",
+    "@as-integrations/fastify": "3.1.0",
+    "@azure/functions": "4.11.0",
+    "@escape.tech/graphql-armor": "3.2.0",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/logger": "workspace:*",
+    "@fastify/cors": "11.1.0",
+    "class-validator": "0.14.3",
+    "decimal.js": "10.6.0",
+    "fastify": "5.8.3",
+    "graphql": "16.12.0",
+    "graphql-deduplicator": "2.0.6"
+  },
+  "devDependencies": {
+    "@escape.tech/graphql-armor-types": "0.7.0",
+    "@types/graphql-deduplicator": "2.0.2",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "typescript": "7.0.2",
+    "vitest": "4.1.0"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

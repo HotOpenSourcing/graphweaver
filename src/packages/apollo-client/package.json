@@ -1,54 +1,54 @@
 {
-	"name": "@exogee/graphweaver-apollo-client",
-	"version": "2.24.0",
-	"description": "Useful helpers for working with Apollo Client and Graphweaver",
-	"license": "Apache-2.0",
-	"sideEffects": false,
-	"type": "module",
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"build:watch": "pnpm build:js --watch",
-		"prettier": "prettier --write .",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"exports": {
-		".": "./lib/index.js",
-		"./normalise": "./lib/normalise.js",
-		"./lib/*": "./lib/*"
-	},
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"peerDependencies": {
-		"@apollo/client": "^3.10.4",
-		"graphql": "^16"
-	},
-	"devDependencies": {
-		"@apollo/client": "3.13.5",
-		"esbuild": "0.28.1",
-		"graphql": "16.12.0",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	}
+  "name": "@exogee/graphweaver-apollo-client",
+  "version": "2.24.1",
+  "description": "Useful helpers for working with Apollo Client and Graphweaver",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "build:watch": "node init && pnpm build:js --watch",
+    "prettier": "prettier --write .",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./normalise": "./lib/normalise.js",
+    "./lib/*": "./lib/*"
+  },
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "@apollo/client": "^3.10.4",
+    "graphql": "^16"
+  },
+  "devDependencies": {
+    "@apollo/client": "3.13.5",
+    "esbuild": "0.28.1",
+    "graphql": "16.12.0",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  }
 }

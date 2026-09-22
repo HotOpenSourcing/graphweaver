@@ -1,42 +1,42 @@
 {
-	"name": "@exogee/graphweaver-example-rest",
-	"version": "2.24.0",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"description": "Simple example of connecting to a Rest API.",
-	"private": true,
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"scripts": {
-		"build": "graphweaver build",
-		"start": "graphweaver start",
-		"watch": "graphweaver watch",
-		"import": "graphweaver import",
-		"version": "npm version --no-git-tag-version"
-	},
-	"dependencies": {
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-rest": "workspace:*",
-		"@exogee/graphweaver-server": "workspace:*",
-		"@mikro-orm/knex": "6.6.2",
-		"@mikro-orm/core": "6.6.2",
-		"@mikro-orm/mysql": "6.6.2",
-		"dotenv": "17.2.3",
-		"got-cjs": "12.5.4",
-		"graphql": "16.12.0"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"graphweaver": "workspace:*",
-		"typescript": "7.0.2"
-	}
+  "name": "@exogee/graphweaver-example-rest",
+  "version": "2.24.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "description": "Simple example of connecting to a Rest API.",
+  "private": true,
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node init && graphweaver build",
+    "start": "node init && graphweaver start",
+    "watch": "graphweaver watch",
+    "import": "graphweaver import",
+    "version": "npm version --no-git-tag-version"
+  },
+  "dependencies": {
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-rest": "workspace:*",
+    "@exogee/graphweaver-server": "workspace:*",
+    "@mikro-orm/knex": "6.6.2",
+    "@mikro-orm/core": "6.6.2",
+    "@mikro-orm/mysql": "6.6.2",
+    "dotenv": "17.2.3",
+    "got-cjs": "12.5.4",
+    "graphql": "16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "graphweaver": "workspace:*",
+    "typescript": "7.0.2"
+  }
 }

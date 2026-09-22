@@ -1,44 +1,44 @@
 {
-	"name": "@exogee/graphweaver-storage-provider",
-	"version": "2.24.0",
-	"description": "Graphweaver Storage Provider Package",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write src/**/*.ts",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@aws-sdk/client-s3": "3.1029.0",
-		"@aws-sdk/s3-request-presigner": "3.1029.0",
-		"@exogee/logger": "workspace:*",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-scalars": "workspace:*"
-	},
-	"devDependencies": {
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphweaver",
-		"storage",
-		"aws"
-	]
+  "name": "@exogee/graphweaver-storage-provider",
+  "version": "2.24.1",
+  "description": "Graphweaver Storage Provider Package",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write src/**/*.ts",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1029.0",
+    "@aws-sdk/s3-request-presigner": "3.1029.0",
+    "@exogee/logger": "workspace:*",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-scalars": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphweaver",
+    "storage",
+    "aws"
+  ]
 }

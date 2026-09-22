@@ -1,49 +1,49 @@
 {
-	"name": "@exogee/graphweaver-example-sqlite",
-	"version": "2.24.0",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"private": true,
-	"description": "Example of connecting a SQLite database.",
-	"scripts": {
-		"build": "graphweaver build",
-		"start": "graphweaver start",
-		"watch": "graphweaver watch",
-		"import": "graphweaver import",
-		"version": "npm version --no-git-tag-version"
-	},
-	"dependencies": {
-		"@apollo/client": "3.13.5",
-		"@as-integrations/aws-lambda": "4.0.1",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-admin-ui-components": "workspace:*",
-		"@exogee/graphweaver-mikroorm": "workspace:*",
-		"@exogee/graphweaver-scalars": "workspace:*",
-		"@exogee/graphweaver-server": "workspace:*",
-		"@nivo/bar": "0.99.0",
-		"@nivo/core": "0.99.0",
-		"@nivo/line": "0.99.0",
-		"@nivo/pie": "0.99.0",
-		"clsx": "2.1.1",
-		"@mikro-orm/core": "6.6.2",
-		"@mikro-orm/knex": "6.6.2",
-		"@mikro-orm/sqlite": "6.6.2",
-		"graphql": "16.12.0",
-		"luxon": "3.7.2",
-		"mikro-orm-sqlite-wasm": "workspace:*",
-		"react": "19.3.0",
-		"react-dom": "19.3.0"
-	},
-	"devDependencies": {
-		"@exogee/graphweaver-config": "workspace:*",
-		"@types/luxon": "3.7.1",
-		"@types/node": "26.6.1",
-		"@types/react": "19.3.0",
-		"graphweaver": "workspace:*",
-		"typescript": "7.0.2",
-		"@types/react-dom": "19.3.0"
-	}
+  "name": "@exogee/graphweaver-example-sqlite",
+  "version": "2.24.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "private": true,
+  "description": "Example of connecting a SQLite database.",
+  "scripts": {
+    "build": "node init && graphweaver build",
+    "start": "node init && graphweaver start",
+    "watch": "graphweaver watch",
+    "import": "graphweaver import",
+    "version": "npm version --no-git-tag-version"
+  },
+  "dependencies": {
+    "@apollo/client": "3.13.5",
+    "@as-integrations/aws-lambda": "4.0.1",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-admin-ui-components": "workspace:*",
+    "@exogee/graphweaver-mikroorm": "workspace:*",
+    "@exogee/graphweaver-scalars": "workspace:*",
+    "@exogee/graphweaver-server": "workspace:*",
+    "@nivo/bar": "0.99.0",
+    "@nivo/core": "0.99.0",
+    "@nivo/line": "0.99.0",
+    "@nivo/pie": "0.99.0",
+    "clsx": "2.1.1",
+    "@mikro-orm/core": "6.6.2",
+    "@mikro-orm/knex": "6.6.2",
+    "@mikro-orm/sqlite": "6.6.2",
+    "graphql": "16.12.0",
+    "luxon": "3.7.2",
+    "mikro-orm-sqlite-wasm": "workspace:*",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@exogee/graphweaver-config": "workspace:*",
+    "@types/luxon": "3.7.1",
+    "@types/node": "26.6.1",
+    "@types/react": "19.3.0",
+    "graphweaver": "workspace:*",
+    "typescript": "7.0.2",
+    "@types/react-dom": "19.3.0"
+  }
 }

@@ -1,50 +1,50 @@
 {
-	"name": "mikro-orm-sqlite-wasm",
-	"version": "2.24.0",
-	"description": "MikroORM SQLite Driver Wasm",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"sideEffects": false,
-	"scripts": {
-		"build": "npm run build:js && npm run build:types",
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write src/**/*.ts",
-		"generate:schema": "tsx ./src/utils/generate-db-schema.ts",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"dependencies": {
-		"@mikro-orm/knex": "6.6.2",
-		"@mikro-orm/sqlite": "6.6.2",
-		"node-sqlite3-wasm": "0.8.53"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"esbuild": "0.28.1",
-		"glob": "13.0.6",
-		"tsx": "4.20.6",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "mikro-orm-sqlite-wasm",
+  "version": "2.24.1",
+  "description": "MikroORM SQLite Driver Wasm",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node init && npm run build:js && npm run build:types",
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write src/**/*.ts",
+    "generate:schema": "tsx ./src/utils/generate-db-schema.ts",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@mikro-orm/knex": "6.6.2",
+    "@mikro-orm/sqlite": "6.6.2",
+    "node-sqlite3-wasm": "0.8.53"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "esbuild": "0.28.1",
+    "glob": "13.0.6",
+    "tsx": "4.20.6",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

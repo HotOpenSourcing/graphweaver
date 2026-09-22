@@ -1,66 +1,66 @@
 {
-	"name": "graphweaver",
-	"version": "2.24.0",
-	"description": "A tool for managing, running, debugging and building Graphweaver projects",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"scripts": {
-		"build": "npm run build:js",
-		"build:js": "node build.js",
-		"package:pack": "pnpm pack",
-		"prettier": "prettier --write .",
-		"gw": "./bin/gw-bin.js",
-		"version": "npm version --no-git-tag-version"
-	},
-	"main": "bin/index.js",
-	"source": "src/index.ts",
-	"bin": {
-		"graphweaver": "bin/gw-bin.js",
-		"gw": "bin/gw-bin.js",
-		"gw-types": "bin/gw-types.js",
-		"gw-print-schema": "bin/gw-print-schema.js",
-		"gw-trusted-documents": "bin/gw-trusted-documents.js"
-	},
-	"files": [
-		"bin"
-	],
-	"dependencies": {
-		"@graphql-tools/utils": "11.0.0",
-		"@exogee/graphweaver-builder": "workspace:*",
-		"@exogee/graphweaver-config": "workspace:*",
-		"@mikro-orm/core": "6",
-		"@mikro-orm/knex": "6",
-		"@mikro-orm/mssql": "6",
-		"@mikro-orm/mysql": "6",
-		"@mikro-orm/postgresql": "6",
-		"@mikro-orm/sqlite": "6",
-		"chokidar": "5.0.0",
-		"esbuild": "0.28.1",
-		"inquirer": "13.2.0",
-		"ora-classic": "5.4.2",
-		"semver": "7.7.3",
-		"validate-npm-package-name": "7.0.1",
-		"yargs": "18.0.0"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"@types/semver": "7.7.1",
-		"@types/validate-npm-package-name": "4.0.2",
-		"@types/yargs": "17.0.35",
-		"prettier": "3.9.6",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "graphweaver",
+  "version": "2.24.1",
+  "description": "A tool for managing, running, debugging and building Graphweaver projects",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "scripts": {
+    "build": "node init && npm run build:js",
+    "build:js": "node init && node build.js",
+    "package:pack": "pnpm pack",
+    "prettier": "prettier --write .",
+    "gw": "./bin/gw-bin.js",
+    "version": "npm version --no-git-tag-version"
+  },
+  "main": "bin/index.js",
+  "source": "src/index.ts",
+  "bin": {
+    "graphweaver": "bin/gw-bin.js",
+    "gw": "bin/gw-bin.js",
+    "gw-types": "bin/gw-types.js",
+    "gw-print-schema": "bin/gw-print-schema.js",
+    "gw-trusted-documents": "bin/gw-trusted-documents.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "dependencies": {
+    "@graphql-tools/utils": "11.0.0",
+    "@exogee/graphweaver-builder": "workspace:*",
+    "@exogee/graphweaver-config": "workspace:*",
+    "@mikro-orm/core": "6",
+    "@mikro-orm/knex": "6",
+    "@mikro-orm/mssql": "6",
+    "@mikro-orm/mysql": "6",
+    "@mikro-orm/postgresql": "6",
+    "@mikro-orm/sqlite": "6",
+    "chokidar": "5.0.0",
+    "esbuild": "0.28.1",
+    "inquirer": "13.2.0",
+    "ora-classic": "5.4.2",
+    "semver": "7.7.3",
+    "validate-npm-package-name": "7.0.1",
+    "yargs": "18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "@types/semver": "7.7.1",
+    "@types/validate-npm-package-name": "4.0.2",
+    "@types/yargs": "17.0.35",
+    "prettier": "3.9.6",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

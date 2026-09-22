@@ -1,43 +1,43 @@
 {
-	"name": "@exogee/graphweaver-aws",
-	"version": "2.24.0",
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"sideEffects": false,
-	"files": [
-		"lib"
-	],
-	"scripts": {
-		"build:js": "node build.js",
-		"build:types": "tsc --emitDeclarationOnly",
-		"build": "pnpm build:js && pnpm build:types",
-		"format": "prettier --write .",
-		"lint": "prettier --check .",
-		"package:pack": "pnpm pack",
-		"version": "npm version --no-git-tag-version"
-	},
-	"license": "Apache-2.0",
-	"devDependencies": {
-		"@exogee/graphweaver": "workspace:*",
-		"esbuild": "0.28.1",
-		"graphql-type-json": "0.3.2",
-		"prettier": "3.9.6",
-		"typescript": "7.0.2"
-	},
-	"peerDependencies": {
-		"@exogee/graphweaver": "workspace:*",
-		"graphql": "^16.9.0",
-		"graphql-type-json": "^0.3.2"
-	},
-	"dependencies": {
-		"@aws-sdk/client-cognito-identity-provider": "3.1029.0",
-		"@exogee/graphweaver-rest-legacy": "workspace:*"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	}
+  "name": "@exogee/graphweaver-aws",
+  "version": "2.24.1",
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "sideEffects": false,
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build:js": "node init && node build.js",
+    "build:types": "node init && tsc --emitDeclarationOnly",
+    "build": "node init && pnpm build:js && pnpm build:types",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "package:pack": "pnpm pack",
+    "version": "npm version --no-git-tag-version"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@exogee/graphweaver": "workspace:*",
+    "esbuild": "0.28.1",
+    "graphql-type-json": "0.3.2",
+    "prettier": "3.9.6",
+    "typescript": "7.0.2"
+  },
+  "peerDependencies": {
+    "@exogee/graphweaver": "workspace:*",
+    "graphql": "^16.9.0",
+    "graphql-type-json": "^0.3.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "3.1029.0",
+    "@exogee/graphweaver-rest-legacy": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  }
 }

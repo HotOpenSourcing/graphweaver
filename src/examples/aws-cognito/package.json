@@ -1,53 +1,53 @@
 {
-	"name": "@exogee/graphweaver-example-aws-cognito",
-	"private": true,
-	"version": "2.24.0",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"description": "Example of connecting to AWS Cognito",
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"scripts": {
-		"build": "graphweaver build",
-		"start": "graphweaver start",
-		"watch": "graphweaver watch",
-		"version": "npm version --no-git-tag-version"
-	},
-	"dependencies": {
-		"@apollo/server": "5.5.0",
-		"@as-integrations/aws-lambda": "4.0.1",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-admin-ui-components": "workspace:*",
-		"@exogee/graphweaver-aws": "workspace:*",
-		"@exogee/graphweaver-server": "workspace:*",
-		"dotenv": "17.2.3",
-		"graphql": "16.12.0",
-		"react": "19.3.0"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"graphweaver": "workspace:*",
-		"typescript": "7.0.2",
-		"@types/react": "19.3.0",
-		"@types/react-dom": "19.3.0"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"postgres",
-		"postgresql",
-		"mysql",
-		"sqlite"
-	]
+  "name": "@exogee/graphweaver-example-aws-cognito",
+  "private": true,
+  "version": "2.24.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "description": "Example of connecting to AWS Cognito",
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node init && graphweaver build",
+    "start": "node init && graphweaver start",
+    "watch": "graphweaver watch",
+    "version": "npm version --no-git-tag-version"
+  },
+  "dependencies": {
+    "@apollo/server": "5.5.0",
+    "@as-integrations/aws-lambda": "4.0.1",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-admin-ui-components": "workspace:*",
+    "@exogee/graphweaver-aws": "workspace:*",
+    "@exogee/graphweaver-server": "workspace:*",
+    "dotenv": "17.2.3",
+    "graphql": "16.12.0",
+    "react": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "graphweaver": "workspace:*",
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "postgres",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ]
 }

@@ -1,46 +1,46 @@
 {
-	"name": "@exogee/graphweaver-example-federation",
-	"private": true,
-	"version": "2.24.0",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/exogee-technology/graphweaver.git"
-	},
-	"description": "Example app used to test federation compatibility",
-	"main": "lib/index.js",
-	"source": "src/index.ts",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
-	"scripts": {
-		"build": "graphweaver build backend && cp dist/backend/index.js integration/index.js",
-		"start": "graphweaver start backend --port 4000",
-		"print": "graphweaver print-schema --output integration/schema.graphql",
-		"test:integration": "pnpm print && pnpm build && cd integration && npm run test:integration",
-		"version": "npm version --no-git-tag-version"
-	},
-	"dependencies": {
-		"@apollo/server": "5.5.0",
-		"@exogee/graphweaver": "workspace:*",
-		"@exogee/graphweaver-admin-ui-components": "workspace:*",
-		"@exogee/graphweaver-server": "workspace:*",
-		"dotenv": "17.2.3"
-	},
-	"devDependencies": {
-		"@types/node": "26.6.1",
-		"graphweaver": "workspace:*",
-		"tsx": "4.20.6",
-		"typescript": "7.0.2"
-	},
-	"keywords": [
-		"graphql",
-		"gql",
-		"headless",
-		"cms",
-		"federation"
-	]
+  "name": "@exogee/graphweaver-example-federation",
+  "private": true,
+  "version": "2.24.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exogee-technology/graphweaver.git"
+  },
+  "description": "Example app used to test federation compatibility",
+  "main": "lib/index.js",
+  "source": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node init && graphweaver build backend && cp dist/backend/index.js integration/index.js",
+    "start": "node init && graphweaver start backend --port 4000",
+    "print": "graphweaver print-schema --output integration/schema.graphql",
+    "test:integration": "pnpm print && pnpm build && cd integration && npm run test:integration",
+    "version": "npm version --no-git-tag-version"
+  },
+  "dependencies": {
+    "@apollo/server": "5.5.0",
+    "@exogee/graphweaver": "workspace:*",
+    "@exogee/graphweaver-admin-ui-components": "workspace:*",
+    "@exogee/graphweaver-server": "workspace:*",
+    "dotenv": "17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "graphweaver": "workspace:*",
+    "tsx": "4.20.6",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "gql",
+    "headless",
+    "cms",
+    "federation"
+  ]
 }
